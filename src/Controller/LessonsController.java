@@ -24,9 +24,9 @@ public class LessonsController {
 
     // method to update the model
     public void updateModel(String pageIDCourseNum) {
-        // parse id anf course from the argument
-        String pageID = "";
-        String courseNum = "";
+        // parse id and course num from the argument
+        String pageID = pageIDCourseNum.split(" ")[0];
+        String courseNum = pageIDCourseNum.split(" ")[1];
 
         // call the setters in the model
         model.setPageID(pageID);
