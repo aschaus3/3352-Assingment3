@@ -28,5 +28,8 @@ public class LessonsController {
         // call the setters in the model
         model.setPageID(pageID);
         model.setCourseNum(courseNum);
+
+        // refresh the view
+        view.show();
     }
 }
