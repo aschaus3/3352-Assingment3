@@ -1,7 +1,7 @@
 package Model;
 
 // Holds all the data structures and logic
-public class Lessons {
+public class Lessons extends Subject {
     // fields for the Lessons model
     private String pageID;
     private String courseNum;

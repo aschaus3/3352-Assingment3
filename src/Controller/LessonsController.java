@@ -7,13 +7,16 @@ import View.LessonsView;
 // controller class for Lessons model
 public class LessonsController {
     // keep track of the view
-    private LessonsView view;
     private Lessons model;
+    private LessonsView view;
 
     // constructor
     public LessonsController(LessonsView view, Lessons model) {
-        this.view = view;
         this.model = model;
+        this.view = view;
+
+        // set the controller of the view
+        this.view.setController(this);
 
         // display the view
         view.show();
