@@ -1,8 +1,8 @@
 package View;
 
+// import required packages/classes
 import Controller.LessonsController;
 import Model.Lessons;
-import Model.Observer;
 
 // class to display the UI for Lessons model
 public class LessonsView extends Observer {
@@ -16,6 +16,10 @@ public class LessonsView extends Observer {
         this.setController(controller);
     }
 
+    // empty constructor
+    public LessonsView() {}
+
+    // method to update the model when the user inputs data
     public void onLessonsUpdate() {
         // collects data from the user
         String newLessonsInfo = "SE 3352A";
