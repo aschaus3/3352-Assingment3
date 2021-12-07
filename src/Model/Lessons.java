@@ -1,25 +1,25 @@
 package Model;
 
 // Holds all the data structures and logic
-public class Lessons
-{
+public class Lessons {
+    // fields for the Lessons model
     private String pageID;
     private String courseNum;
 
-
-    public String getPageID(){
+    // methods use to set and get the data of the model
+    public String getPageID() {
         return pageID;
     }
 
-    public void setPageID(String ID){
+    public void setPageID(String ID) {
         this.pageID = ID;
     }
 
-    public String getCourseNum(){
+    public String getCourseNum() {
         return courseNum;
     }
 
-    public void setCourseNum(String num){
+    public void setCourseNum(String num) {
         this.courseNum = num;
     }
 }
