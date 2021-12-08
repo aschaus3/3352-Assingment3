@@ -6,7 +6,7 @@ import Model.Lessons;
 import Model.Observer;
 
 // class to display the UI for Lessons model
-public class LessonsView extends Model.Observer {
+public class LessonsView extends Observer {
     // keep track of the model and controller
     private Lessons model;
     private LessonsController controller;
