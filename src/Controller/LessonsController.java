@@ -36,7 +36,6 @@ public class LessonsController {
         String edits = "text edits";
         String pageContent = "page text";
 
-
         // call the setters in the model
         model.setPageID(pageID);
         model.setCourseNum(courseNum);
@@ -50,6 +49,4 @@ public class LessonsController {
         // refresh the view
         view.show();
     }
-
-
 }

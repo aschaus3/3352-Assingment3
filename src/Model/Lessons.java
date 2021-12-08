@@ -44,8 +44,8 @@ public class Lessons extends Subject {
     public String getPageContent() {
         return pageContent;
     }
+
     public void downloadContent(String content) {
         this.pageContent = content;
     }
-
 }
