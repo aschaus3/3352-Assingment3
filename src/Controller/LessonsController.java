@@ -28,7 +28,7 @@ public class LessonsController {
         String pageID = pageIDCourseNum.split(" ")[0];
         String courseNum = pageIDCourseNum.split(" ")[1];
 
-        String comment = "";
+        String comment = "added comment";
 
 
         // call the setters in the model

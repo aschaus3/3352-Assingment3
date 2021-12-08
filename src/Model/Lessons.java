@@ -27,7 +27,7 @@ public class Lessons extends Subject {
         this.courseNum = num;
     }
 
-    public void getPageComments()   {return pageComments};
+    public String getPageComments()   { return pageComments; }
 
-    public void setPageComments(String comment)   {this.pageComments = comment};
+    public void setPageComments(String comment)   {this.pageComments = comment;}
 }
