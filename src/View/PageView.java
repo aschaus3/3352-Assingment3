@@ -1,29 +1,27 @@
 package View;
 
-// import required packages/classes
-import Controller.LessonsController;
-import Model.Lessons;
+import Controller.PageController;
 import Model.Observer;
+import Model.Page;
 
-// class to display the UI for Lessons model
-public class LessonsView extends Observer {
+public class PageView extends Observer {
     // keep track of the model and controller
-    private Lessons model;
-    private LessonsController controller;
+    private Page model;
+    private PageController controller;
 
     // constructor
-    public LessonsView(Lessons model, LessonsController controller) {
+    public PageView(Page model, PageController controller) {
         this.setModel(model);
         this.setController(controller);
     }
 
     // empty constructor
-    public LessonsView() {}
+    public PageView() {}
 
     // method to update the model when the user inputs data
     public void onLessonsUpdate() {
         // collects data from the user
-        String newLessonsInfo = "SE3352A";
+        String newLessonsInfo = "1 - 'Intro To Databases'";
 
         // send the data to the controller
         this.controller.updateModel(newLessonsInfo);
@@ -40,11 +38,11 @@ public class LessonsView extends Observer {
     }
 
     // methods use to set and get the data of the controller
-    public Lessons getModel() {
+    public Page getModel() {
         return model;
     }
 
-    public void setModel(Lessons model) {
+    public void setModel(Page model) {
         // dettach itself if model already existed
         if (this.model != null) {
             this.model.dettach(this);
@@ -54,15 +52,11 @@ public class LessonsView extends Observer {
         this.model.attach(this); // the controller attaches itself as an observer
     }
 
-    public LessonsController getController() {
+    public PageController getController() {
         return controller;
     }
 
-    public void setController(LessonsController controller) {
+    public void setController(PageController controller) {
         this.controller = controller;
-    }
-
-    public void Comments()  {
-        // add a comment components to the lesson view, so students can comment
     }
 }

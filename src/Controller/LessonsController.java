@@ -4,6 +4,8 @@ package Controller;
 import Model.Lessons;
 import View.LessonsView;
 
+import java.util.ArrayList;
+
 // controller class for Lessons model
 public class LessonsController {
     // keep track of the view
@@ -23,22 +25,16 @@ public class LessonsController {
     }
 
     // method to update the model
-    public void updateModel(String pageIDCourseNum) {
-        // parse id and course num from the argument
-        String pageID = pageIDCourseNum.split(" ")[0];
-        String courseNum = pageIDCourseNum.split(" ")[1];
+    public void updateModel(String courseNum) {
 
-        String comment = "added comment";
-
+        ArrayList<String> comment = new ArrayList<>();
+        comment.add("Student1 - random comment");
 
         // call the setters in the model
-        model.setPageID(pageID);
         model.setCourseNum(courseNum);
         model.setPageComments(comment);
 
         // refresh the view
         view.show();
     }
-
-
 }
