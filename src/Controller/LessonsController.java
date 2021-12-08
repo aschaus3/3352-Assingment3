@@ -29,12 +29,19 @@ public class LessonsController {
         String courseNum = pageIDCourseNum.split(" ")[1];
 
         String comment = "added comment";
+        String edits = "text edits";
+        String pageContent = "page text";
 
 
         // call the setters in the model
         model.setPageID(pageID);
         model.setCourseNum(courseNum);
         model.setPageComments(comment);
+        model.editPage(edits);
+        model.editPage(pageID);
+        model.createPage(pageID);
+        model.downloadContent(pageID);
+        model.removePage(pageID);
 
         // refresh the view
         view.show();

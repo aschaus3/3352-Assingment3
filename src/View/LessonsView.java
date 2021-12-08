@@ -66,6 +66,22 @@ public class LessonsView extends Model.Observer {
         //add a comment components to the lesson view, so students can comment
     }
 
+    public void EditPage() {
+        //add a edit page components to the lesson view, so  teacher can edit the lesson page
+    }
+
+    public void RemovePage() {
+        //add a remove page components to the lesson view, so teacher can remove lesson
+    }
+
+    public void DownloadContent() {
+        //add a download content components to the lesson view, so users can download lesson content
+    }
+
+    public void CreatePage() {
+        //add a create page components to the lesson view, so teacher can create a new page
+    }
+
 
 
 
