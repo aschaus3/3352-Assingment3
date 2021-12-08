@@ -1,7 +1,6 @@
 package Model;
 
 // import required packages/classes
-import View.Observer;
 import java.util.ArrayList;
 
 // Subject abstract class for the Observer design pattern

@@ -6,6 +6,10 @@ public class Lessons extends Subject {
     private String pageID;
     private String courseNum;
 
+    private String pageComments;
+
+
+
     // methods use to set and get the data of the model
     public String getPageID() {
         return pageID;
@@ -22,4 +26,8 @@ public class Lessons extends Subject {
     public void setCourseNum(String num) {
         this.courseNum = num;
     }
+
+    public void getPageComments()   {return pageComments};
+
+    public void setPageComments(String comment)   {this.pageComments = comment};
 }

@@ -3,9 +3,10 @@ package View;
 // import required packages/classes
 import Controller.LessonsController;
 import Model.Lessons;
+import Model.Observer;
 
 // class to display the UI for Lessons model
-public class LessonsView extends Observer {
+public class LessonsView extends Model.Observer {
     // keep track of the model and controller
     private Lessons model;
     private LessonsController controller;
@@ -60,4 +61,12 @@ public class LessonsView extends Observer {
     public void setController(LessonsController controller) {
         this.controller = controller;
     }
+
+    public void Comments()  {
+        //add a comment components to the lesson view, so students can comment
+    }
+
+
+
+
 }

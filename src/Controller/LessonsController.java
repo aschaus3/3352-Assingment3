@@ -28,11 +28,17 @@ public class LessonsController {
         String pageID = pageIDCourseNum.split(" ")[0];
         String courseNum = pageIDCourseNum.split(" ")[1];
 
+        String comment = "";
+
+
         // call the setters in the model
         model.setPageID(pageID);
         model.setCourseNum(courseNum);
+        model.setPageComments(comment);
 
         // refresh the view
         view.show();
     }
+
+
 }
