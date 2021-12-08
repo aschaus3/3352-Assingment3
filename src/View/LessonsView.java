@@ -6,7 +6,7 @@ import Model.Lessons;
 import Model.Observer;
 
 // class to display the UI for Lessons model
-public class LessonsView extends Observer {
+public class LessonsView extends Model.Observer {
     // keep track of the model and controller
     private Lessons model;
     private LessonsController controller;
@@ -23,7 +23,7 @@ public class LessonsView extends Observer {
     // method to update the model when the user inputs data
     public void onLessonsUpdate() {
         // collects data from the user
-        String newLessonsInfo = "SE3352A";
+        String newLessonsInfo = "SE 3352A";
 
         // send the data to the controller
         this.controller.updateModel(newLessonsInfo);
@@ -64,5 +64,21 @@ public class LessonsView extends Observer {
 
     public void Comments()  {
         // add a comment components to the lesson view, so students can comment
+    }
+
+    public void EditPage() {
+        // add a edit page components to the lesson view, so  teacher can edit the lesson page
+    }
+
+    public void RemovePage() {
+        // add a remove page components to the lesson view, so teacher can remove lesson
+    }
+
+    public void DownloadContent() {
+        // add a download content components to the lesson view, so users can download lesson content
+    }
+
+    public void CreatePage() {
+        // add a create page components to the lesson view, so teacher can create a new page
     }
 }

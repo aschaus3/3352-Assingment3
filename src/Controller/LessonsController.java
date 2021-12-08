@@ -25,16 +25,31 @@ public class LessonsController {
     }
 
     // method to update the model
-    public void updateModel(String courseNum) {
+    public void updateModel(String pageIDCourseNum) {
+        // parse id and course num from the argument
+        String pageID = pageIDCourseNum.split(" ")[0];
+        String courseNum = pageIDCourseNum.split(" ")[1];
 
-        ArrayList<String> comment = new ArrayList<>();
-        comment.add("Student1 - random comment");
+        ArrayList<String> comments = new ArrayList<>();
+        comments.add("student1 - added comment");
+
+        String edits = "text edits";
+        String pageContent = "page text";
+
 
         // call the setters in the model
+        model.setPageID(pageID);
         model.setCourseNum(courseNum);
-        model.setPageComments(comment);
+        model.setPageComments(comments);
+        model.editPage(edits);
+        model.editPage(pageID);
+        model.createPage(pageID);
+        model.downloadContent(pageID);
+        model.removePage(pageID);
 
         // refresh the view
         view.show();
     }
+
+
 }
