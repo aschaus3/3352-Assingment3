@@ -4,6 +4,8 @@ package Controller;
 import Model.Lessons;
 import View.LessonsView;
 
+import java.util.ArrayList;
+
 // controller class for Lessons model
 public class LessonsController {
     // keep track of the view
@@ -28,7 +30,9 @@ public class LessonsController {
         String pageID = pageIDCourseNum.split(" ")[0];
         String courseNum = pageIDCourseNum.split(" ")[1];
 
-        String comment = "added comment";
+        ArrayList<String> comments = new ArrayList<>();
+        comments.add("student1 - added comment");
+
         String edits = "text edits";
         String pageContent = "page text";
 
@@ -36,7 +40,7 @@ public class LessonsController {
         // call the setters in the model
         model.setPageID(pageID);
         model.setCourseNum(courseNum);
-        model.setPageComments(comment);
+        model.setPageComments(comments);
         model.editPage(edits);
         model.editPage(pageID);
         model.createPage(pageID);
