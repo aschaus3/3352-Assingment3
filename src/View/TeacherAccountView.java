@@ -21,10 +21,11 @@ public class TeacherAccountView extends Observer {
     // method to update the model when the user inputs data
     public void onLessonsUpdate() {
         // collects data from the user
-        String newTeacherInfo = "John Doe";
+        String newTeacherFirstName = "Dwayne the";
+        String newTeacherLastName = "Rock Johnson";
 
         // send the data to the controller
-        this.controller.updateModel(newTeacherInfo);
+        this.controller.updateModel(newTeacherFirstName, newTeacherLastName);
     }
 
     // implement the update method from Observer class
