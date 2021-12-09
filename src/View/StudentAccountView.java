@@ -1,31 +1,31 @@
 package View;
 
 // import required packages/classes
-import Controller.PageController;
+import Controller.StudentAccountController;
 import Model.Observer;
-import Model.Page;
+import Model.StudentAccount;
 
-public class PageView extends Observer {
+public class StudentAccountView extends Observer {
     // keep track of the model and controller
-    private Page model;
-    private PageController controller;
+    private StudentAccount model;
+    private StudentAccountController controller;
 
     // constructor
-    public PageView(Page model, PageController controller) {
+    public StudentAccountView(StudentAccount model, StudentAccountController controller) {
         this.setModel(model);
         this.setController(controller);
     }
 
     // empty constructor
-    public PageView() {}
+    public StudentAccountView() {}
 
     // method to update the model when the user inputs data
     public void onLessonsUpdate() {
         // collects data from the user
-        String newLessonsInfo = "1 - 'Intro To Databases'";
+        String newStudentInfo = "Jim Halpert";
 
         // send the data to the controller
-        this.controller.updateModel(newLessonsInfo);
+        this.controller.updateModel(newStudentInfo);
     }
 
     // implement the update method from Observer class
@@ -39,11 +39,11 @@ public class PageView extends Observer {
     }
 
     // methods use to set and get the data of the controller
-    public Page getModel() {
+    public StudentAccount getModel() {
         return model;
     }
 
-    public void setModel(Page model) {
+    public void setModel(StudentAccount model) {
         // dettach itself if model already existed
         if (this.model != null) {
             this.model.dettach(this);
@@ -53,11 +53,11 @@ public class PageView extends Observer {
         this.model.attach(this); // the controller attaches itself as an observer
     }
 
-    public PageController getController() {
+    public StudentAccountController getController() {
         return controller;
     }
 
-    public void setController(PageController controller) {
+    public void setController(StudentAccountController controller) {
         this.controller = controller;
     }
 }

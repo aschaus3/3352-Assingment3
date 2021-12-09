@@ -5,7 +5,7 @@ public class Page extends Subject {
     private String pageID;
     private String pageContent;
 
-    // method to update the model when the user inputs data
+    // methods used to set and get the data of the model
     public String getPageID() {
         return pageID;
     }
