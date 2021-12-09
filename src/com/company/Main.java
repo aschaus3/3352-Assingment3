@@ -4,12 +4,15 @@ package com.company;
 import Controller.LessonsController;
 import Controller.PageController;
 import Controller.StudentAccountController;
+import Controller.TeacherAccountController;
 import Model.Lessons;
 import Model.Page;
 import Model.StudentAccount;
+import Model.TeacherAccount;
 import View.LessonsView;
 import View.PageView;
 import View.StudentAccountView;
+import View.TeacherAccountView;
 
 public class Main {
 
@@ -34,6 +37,12 @@ public class Main {
         // create an instance of the student account view
         StudentAccountView sv  = new StudentAccountView();
 
+        // create and instance of the teacher account model
+        TeacherAccount t = new TeacherAccount();
+
+        // create an instance of the teacher account view
+        TeacherAccountView tv = new TeacherAccountView();
+
         // create an instance of the controller
         LessonsController c = new LessonsController(v, m);
 
@@ -41,7 +50,10 @@ public class Main {
         PageController pc1 = new PageController(pv1, p1);
         PageController pc2 = new PageController(pv2, p2);
 
-        // create the controller for the student account view
+        // create the controller for the student account
         StudentAccountController sc = new StudentAccountController(sv, s);
+
+        // create the controller for the teacher account
+        TeacherAccountController tc = new TeacherAccountController(tv, t);
     }
 }
