@@ -20,7 +20,7 @@ public class PageView extends Observer {
     public PageView() {}
 
     // method to update the model when the user inputs data
-    public void onLessonsUpdate() {
+    public void onPageUpdate() {
         // collects data from the user
         String newLessonsInfo = "1 - 'Intro To Databases'";
 

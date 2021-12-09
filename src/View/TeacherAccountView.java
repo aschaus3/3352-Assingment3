@@ -19,7 +19,7 @@ public class TeacherAccountView extends Observer {
     public TeacherAccountView() {}
 
     // method to update the model when the user inputs data
-    public void onLessonsUpdate() {
+    public void onTeacherAccountUpdate() {
         // collects data from the user
         String newTeacherFirstName = "Dwayne the";
         String newTeacherLastName = "Rock Johnson";
